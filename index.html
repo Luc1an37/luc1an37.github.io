@@ -1,12 +1,250 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Aniverse Clicker</title>
-    <!-- Мгновенное перенаправление на вашу игру -->
-    <meta http-equiv="refresh" content="0; url=https://luc1an37.github.io/AniverseGAME/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniverse Game — Эпическая Космическая RPG-Игра в Telegram</title>
+  <style>
+    :root {
+      --bg-color: #0a0f1e;
+      --card-bg: rgba(20, 26, 46, 0.7);
+      --accent-color: #7c3aed;
+      --gold-color: #fbbf24;
+      --text-color: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+      margin-bottom: 5px;
+    }
+    .logo span {
+      color: var(--gold-color);
+    }
+    .hero {
+      text-align: center;
+      padding: 30px 0 60px;
+    }
+    .hero-banner {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 25px rgba(124, 58, 237, 0.2);
+      margin: 0 auto 30px;
+      display: block;
+    }
+    .hero-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent-color), #5b21b6);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-play:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.5);
+    }
+    .features {
+      padding: 60px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .feature-card:hover {
+      border-color: rgba(124, 58, 237, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    .feature-name {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    footer {
+      padding: 60px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    .legal-text {
+      max-width: 600px;
+      margin: 20px auto 0;
+      line-height: 1.5;
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+    }
+  </style>
 </head>
 <body>
-    <p>Загрузка Aniverse Clicker...</p>
-</body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">Aniverse <span>Game</span></div>
+    </header>
+
+    <!-- Hero Section -->
+    section class="hero">
+      <!-- We load the generated welcome_banner.jpg from the same directory! -->
+      <img src="welcome_banner.jpg" alt="Aniverse Game Banner" class="hero-banner">
+      <h1 class="hero-title">Кликай, Сражайся, Покоряй Космос!</h1>
+      <p class="hero-desc">
+        Добро пожаловать в Aniverse Game — революционную кликер-RPG игру прямо внутри вашего Telegram! 
+        Нанимайте отважных наёмников, зачищайте опасные этажи в Башне испытаний, копите кристаллы в Шахте, 
+        куйте легендарное снаряжение и постройте свою непобедимую космическую империю.
+      </p>
+      <a href="https://t.me/Aniverse_gamebot/Aniverse_GAME" target="_blank" class="btn-play">
+        <span>🤖 Запустить в Telegram</span>
+      </a>
+    </section>
+
+    <!-- Gameplay Features -->
+    <section class="features">
+      <h2 class="section-title">Игровые Механики</h2>
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">🏰</div>
+          <h3 class="feature-name">Башня Испытаний</h3>
+          <p class="feature-desc">
+            Соревнуйтесь в прохождении 15 сложнейших этажей Башни! Побеждайте уникальных монстров, ставьте рекорды, 
+            поднимайтесь по Глобальной Лиге Лидеров и забирайте редчайшую добычу.
+          </p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">🔨</div>
+          <h3 class="feature-name">Кузница Снаряжения</h3>
+          <p class="feature-desc">
+            Собирайте дерево, железную руду и драконью чешую с поверженных боссов. Куйте 12 видов мощного оружия, 
+            брони и амулетов, повышая свои показатели и выстраивая индивидуальные RPG-билды.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3 class="feature-name">Шахта Кристаллов</h3>
+          <p class="feature-desc">
+            Разблокируйте и прокачивайте Имперскую Шахту Кристаллов! Она пассивно генерирует ценную премиум-валюту 
+            в фоновом режиме, даже когда вы находитесь оффлайн.
+          </p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">🌀</div>
+          <h3 class="feature-name">Временные Разломы</h3>
+          <p class="feature-desc">
+            Ловите спонтанно пролетающие Космические Червоточины на экране кликов. Активируйте их, чтобы совершить 
+            прыжок во времени на 1 час вперед и мгновенно получить всю пассивную прибыль!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with Contacts and Privacy Policy (Crucial for Yandex Approval!) -->
+    <footer>
+      <div class="footer-links">
+        <a href="https://t.me/Aniverse_gamebot" target="_blank">Телеграм Бот</a>
+        <a href="#privacy">Политика конфиденциальности</a>
+        <a href="/cdn-cgi/l/email-protection#87f4f2f7f7e8f5f3c7e6e9eef1e2f5f4e2e0e6eae2a9f5f2">Поддержка: <span class="__cf_email__" data-cfemail="a4d7d1d4d4cbd6d0e4c5cacdd2c1d6d7c1c3c5c9c18ad6d1">[email&#160;protected]</span></a>
+      </div>
+      <p>&copy; 2026 Aniverse Game. Все права защищены.</p>
+      
+      <div class="legal-text" id="privacy">
+        <b>Политика конфиденциальности:</b> Данный сайт создан исключительно в информационных целях для презентации игры-симулятора Aniverse Game, работающей на платформе Telegram WebApps. Мы не собираем, не обрабатываем и не храним персональные данные пользователей на данном веб-ресурсе. Все игровые сохранения производятся локально на устройствах пользователей через защищенное хранилище Telegram. По любым вопросам обращайтесь по адресу поддержки.
+      </div>
+    </footer>
+  </div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
