@@ -4531,7 +4531,7 @@
         const score = state.totalGold || 0;
         const adsCount = state.totalAdsWatched || 0;
 
-        fetch('https://aniverse-backend.ragafonov05.workers.dev/api/leaderboard', {
+        fetch('https://aniversegame.pages.dev/api/leaderboard', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -4560,7 +4560,7 @@
 
         el.leaderboardList.innerHTML = '<div style="text-align:center; padding: 20px 0; font-size:11px; color:rgba(255,255,255,0.4);"><div class="spinner" style="border-top-color:#fbbf24; width:20px; height:20px; margin:0 auto 8px auto;"></div>Загрузка списка лидеров...</div>';
 
-        fetch('https://aniverse-backend.ragafonov05.workers.dev/api/leaderboard')
+        fetch('https://aniversegame.pages.dev/api/leaderboard')
           .then(response => {
             if (!response.ok) throw new Error('Network response not ok');
             return response.json();
